@@ -1,0 +1,53 @@
+contract_types:
+  services:
+    name: "Договор оказания услуг"
+    fields:
+      - id: "parties"
+        label: "Стороны"
+        type: "entity_list"
+        required: true
+      - id: "subject"
+        label: "Предмет договора"
+        type: "text"
+        required: true
+      - id: "amount"
+        label: "Сумма"
+        type: "money"
+      - id: "payment_terms"
+        label: "Условия оплаты"
+        type: "text"
+      - id: "start_date"
+        label: "Дата начала"
+        type: "date"
+        required: true
+      - id: "end_date"
+        label: "Дата окончания"
+        type: "date"
+      - id: "auto_renewal"
+        label: "Автопродление"
+        type: "boolean"
+      - id: "termination_notice"
+        label: "Уведомление о расторжении"
+        type: "text"
+      - id: "liability_cap"
+        label: "Ограничение ответственности"
+        type: "money"
+      - id: "penalties"
+        label: "Штрафы"
+        type: "text"
+
+  lease:
+    name: "Договор аренды"
+    fields:
+      - id: "property_address"
+        label: "Адрес объекта"
+        type: "text"
+      - id: "rent_amount"
+        label: "Арендная плата"
+        type: "money"
+      - id: "indexation"
+        label: "Индексация"
+        type: "text"
+      - id: "deposit"
+        label: "Депозит"
+        type: "money"
